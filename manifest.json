@@ -1,0 +1,24 @@
+{ 
+  "name": "Typeracer booster",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Typeracer booster",
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Boost your typing!"
+  },
+  "permissions": [
+    "http://*.typeracer.com/*",
+    "https://*.typeracer.com/*",
+    "tabs"
+  ],
+  "author": "Chris"
+}
