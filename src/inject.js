@@ -2,13 +2,14 @@
 
 	$(document).ready( function() {
 		// Place a div at a top right about hacked mode
-		var div = document.createElement('div');
-		div.style.position = 'fixed';
-		div.style.top = 0;
-		div.style.right = 0;
-		div.textContent = 'Hacked mode = enabled';
-		document.body.appendChild(div);
-	 
+	  	var $hackedModeDiv = jQuery(document.createElement("div"));
+
+		$hackedModeDiv.css('position', 'fixed');
+		$hackedModeDiv.css('top', '0px');
+		$hackedModeDiv.css('right', '0px');
+		$hackedModeDiv.html('Hacked mode = enabled');
+		$('body').append($hackedModeDiv);	
+ 
 		$('input.txtInput').focus();
 
 		var text = $('.nonHideableWords ').text();
@@ -23,7 +24,7 @@
 			if ( e.keyCode == 32 ){ 	// check for space
 				nextWord();				
 			}
-		}); 
-	});
+		});
+ 	});
 
 })();
